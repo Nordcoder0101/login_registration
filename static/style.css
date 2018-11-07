@@ -1,0 +1,26 @@
+.new_user{
+  width: 300px
+}
+
+.fail{
+  color: red;
+}
+
+.success{
+  color: green;
+}
+
+.new_user{
+  display: inline-block;
+}
+
+.class{
+  display: inline-block;
+}
+
+p{
+  display: inline-block;
+}
+
+form{
+}

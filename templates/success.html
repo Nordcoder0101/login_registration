@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Flask Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href={{ url_for('static', filename='style.css') }} />
+</head>
+<body>
+  <div>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class = flashes>
+          {% for category, message in messages %}
+              <li class ="{{category}}">{{message}}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+  {% endwith %}
+  </div>
+
+  <p>Hello {{user[0]['first_name']}} {{user[0]['last_name']}}</p>
+  <form action="/logout">
+    <input type="submit" value="Logout">
